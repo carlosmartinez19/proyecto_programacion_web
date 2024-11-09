@@ -1,0 +1,750 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+    height: 100vh;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll; /* Permite el desplazamiento vertical */
+    overflow-x: hidden; /* Elimina la barra horizontal */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+header {
+    background-color: #45b39d;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    text-align: left;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin-bottom: 0px;
+    line-height: 1.2;
+}
+
+.logo span {
+    color: #c1e1c1;
+    display: block;
+}
+
+nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+nav ul li {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Barra de Búsqueda*/
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: -50px;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.search-bar input {
+    border: none;
+    padding: 10px 15px;
+    width: 200px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 25px 0 0 25px;
+    height: 38px;
+}
+
+.search-bar button {
+    background-color: #45b39d;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 25px 25px 0;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar input::placeholder {
+    color: #888;
+}
+
+.search-bar button i {
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.hero {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #a2d9ce;
+    padding: 50px 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.hero h1 span {
+    color: #f2f3f4;
+}
+
+.hero h2 {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #ffffff;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.hero-image img {
+    width: 100px;
+    margin-top: 20px;
+}
+
+/* Efecto hover para resaltar el servicio */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 20px;
+    gap: 20px;
+    background-color: #e7f3f0;
+}
+
+.meditation {
+    background-color: #138d75;
+}
+
+.meditacion {
+    text-align: center; 
+    margin-top: 40px;
+    flex: 1;
+    margin: 40px auto; /* Centra la sección verticalmente y horizontalmente */
+    padding: 20px;
+    max-width: 800px; /* Limita el ancho del texto */
+}
+
+.meditacion p {
+    text-align: justify; /* Justifica el texto para una apariencia más profesional */
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 auto;
+}
+
+.meditacion ul {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 auto;
+    list-style-position: outside;
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-left: 20px;
+}
+
+.yoga {
+    background-color: #7d3c98;
+}
+
+.yoga2 {
+    text-align: center; 
+    margin-top: 40px;
+    flex: 1;
+    margin: 40px auto; /* Centra la sección verticalmente y horizontalmente */
+    padding: 20px;
+    max-width: 800px; /* Limita el ancho del texto */
+}
+
+.yoga2 p {
+    text-align: justify; /* Justifica el texto para una apariencia más profesional */
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 auto;
+}
+
+.yoga2 ul {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 auto;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.exercise {
+    background-color: #cb4335;
+}
+
+.ejercicio {
+    text-align: center; 
+    margin-top: 40px;
+    flex: 1;
+    margin: 40px auto; /* Centra la sección verticalmente y horizontalmente */
+    padding: 20px;
+    max-width: 800px; /* Limita el ancho del texto */
+}
+
+.ejercicio p {
+    text-align: justify; /* Justifica el texto para una apariencia más profesional */
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 auto;
+}
+
+.ejercicio ul {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 auto;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.feeding {
+    background-color: #229954;
+}
+
+.alimentacion {
+    text-align: center; 
+    margin-top: 40px;
+    flex: 1;
+    margin: 40px auto; /* Centra la sección verticalmente y horizontalmente */
+    padding: 20px;
+    max-width: 800px; /* Limita el ancho del texto */
+}
+
+.alimentacion p {
+    text-align: justify; /* Justifica el texto para una apariencia más profesional */
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 auto;
+}
+
+.alimentacion ul {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 auto;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.nofap {
+    background-color: #d68910;
+}
+
+.no-fap {
+    text-align: center; 
+    margin-top: 40px;
+    flex: 1;
+    margin: 40px auto; /* Centra la sección verticalmente y horizontalmente */
+    padding: 20px;
+    max-width: 800px; /* Limita el ancho del texto */
+}
+
+.no-fap p {
+    text-align: justify; /* Justifica el texto para una apariencia más profesional */
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 auto;
+}
+
+.no-fap ul {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 auto;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.wimhof {
+    background-color: #ba4a00;
+}
+
+.wim-hof {
+    text-align: center; 
+    margin-top: 40px;
+    flex: 1;
+    margin: 40px auto; /* Centra la sección verticalmente y horizontalmente */
+    padding: 20px;
+    max-width: 800px; /* Limita el ancho del texto */
+}
+
+.wim-hof p {
+    text-align: justify; /* Justifica el texto para una apariencia más profesional */
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 auto;
+}
+
+.wim-hof ul {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 auto;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 80%;
+    flex-direction: row;
+}
+
+.imagen-medio {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 80%;
+    flex-direction: row;
+}
+
+.service {
+    text-align: center;
+    width: calc(33.333% - 20px);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.service a {
+    text-decoration: none;
+    color: white; /*El texto del enlace será blanco*/
+    display: block; /*Hace que ocupe todo el espacio del div*/
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service a:hover {
+    color: white; /* Mantiene el texto en blanco */
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+}
+
+.service img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 16px;
+    color: #666;
+}
+
+/*Efectos para el footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+    margin-top: 0;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* Estilos para la sección de contacto */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    margin-bottom: 100px;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    resize: none; 
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 48px; /* Tamaño del ícono */
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img {
+    width: 48px;
+    height: 48px;
+}
+
+.social-icon:hover img {
+    transform: scale(1.2); /* Efecto zoom al pasar el mouse */
+}
+
+/* Estilos para las secciones de "Sobre Nosotros" y "Contacto" */
+.contact-us {
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.contact-us h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.contact-us p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: justify;
+}
+
+.about-us {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+    margin-top: 40px;
+}
+
+.about-us h2 {
+    font-size: 28px;
+    color: #333;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.about-us p {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 auto;
+}
+
+.about-us ul {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 auto;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Estilo para el formulario de contacto */
+/* Contenedor del formulario centrado */
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 15px;
+}
+
+/* Estilo del formulario de contacto */
+.contact-form {
+    max-width: 600px;
+    width: 100%; /* Asegura que el formulario ocupe todo el ancho disponible */
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo de las etiquetas */
+.contact-form label {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Estilo de los campos de entrada y área de texto */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1.1em;
+    color: #333;
+    background-color: #f9f9f9;
+    resize: none;
+}
+
+.contact-form textarea {
+    display: flex;
+    margin: 0 auto;
+    height: 180px;
+    resize: none;
+    box-sizing: content-box;
+}
+
+/* Efecto de foco en los campos */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #45b39d;
+}
+
+/* Estilo del botón de envío */
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #45b39d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #3c9a85;
+}
+
+.contact-form button:hover {
+    background-color: #3c9a85;
+}
+
+/* Estilo para la información de contacto y redes sociales */
+.contact-info {
+    text-align: center;
+    margin-top: auto; /* Mueve esta sección hasta el final del contenedor */
+}
+
+.contact-info h2 {
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+}
+
+/* Estilo para barra de desplazamiento vertical visible */
+body::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Barra visible pero tenue */
+    border-radius: 10px;
+}
+
+body:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Barra más visible cuando se interactúa */
+}
+
+.about_us {
+    text-align: center; 
+    margin-top: 40px;
+    flex: 1;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 100%; /* Opción única para servicios */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .service {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .imagenes-meditacion, .imagenes-yoga, .imagenes-ejercicio, .imagenes-alimentacion, .imagenes-nofap, .imagenes-wimhof {
+        flex-direction: column; /* Coloca las imágenes en una columna */
+        align-items: center; /* Centra las imágenes en la columna */
+        gap: 10px; /* Reduce el espacio entre las imágenes */
+    }
+
+    .imagenes-meditacion .imagen, .imagenes-yoga .imagen, .imagenes-ejercicio .imagen, .imagenes-alimentacion .imagen, .imagenes-nofap .imagen, .imagenes-wimhof .imagen {
+        max-width: 90%; /* Ajusta el ancho de las imágenes para que ocupen el 90% del contenedor */
+    }
+
+    .meditacion p, .meditacion ul, .yoga p, .yoga ul, .ejercicio p, .ejercicio ul, .alimentacion p, .alimentacion ul, .no-fap p, .no-fap ul, .wim-hof p, .wim-hof ul{
+        padding: 0 15px; /* Agrega un pequeño margen lateral para el texto */
+        text-align: justify; /* Justifica el texto para mejor legibilidad */
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .service {
+        width: 100%; /* Opción única para servicios */
+        margin-bottom: 20px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .imagenes-meditacion, .imagenes-yoga, .imagenes-ejercicio, .imagenes-alimentacion, .imagenes-nofap, .imagenes-wimhof {
+        flex-direction: column; /* Coloca las imágenes en una columna */
+        align-items: center; /* Centra las imágenes en la columna */
+        gap: 10px; /* Reduce el espacio entre las imágenes */
+    }
+
+    .imagenes-meditacion .imagen, .imagenes-yoga .imagen, .imagenes-ejercicio .imagen, .imagenes-alimentacion .imagen, .imagenes-nofap .imagen, .imagenes-wimhof .imagen {
+        max-width: 90%; /* Ajusta el ancho de las imágenes para que ocupen el 90% del contenedor */
+    }
+
+    .meditacion p, .meditacion ul, .yoga p, .yoga ul, .ejercicio p, .ejercicio ul, .alimentacion p, .alimentacion ul, .no-fap p, .no-fap ul, .wim-hof p, .wim-hof ul{
+        padding: 0 15px; /* Agrega un pequeño margen lateral para el texto */
+        text-align: justify; /* Justifica el texto para mejor legibilidad */
+    }
+}
